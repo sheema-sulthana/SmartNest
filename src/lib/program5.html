@@ -1,0 +1,76 @@
+e. Write a JavaScript program to With three types of functions
+i.	Function declaration 
+ii.	Function definition
+iii.	Arrow functions
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Three Types of Functions Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #fafafa;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      line-height: 1.6;
+    }
+    strong {
+      color: #007acc;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+      color: #c7254e;
+    }
+  </style>
+</head>
+<body>
+  <h2>JavaScript Function Types Demo</h2>
+  <div id="output"></div>
+
+  <script>
+    // 1. Function Declaration
+    function add(a, b) {
+      return a + b;
+    }
+
+    // 2. Function Expression
+    const multiply = function (a, b) {
+      return a * b;
+    };
+
+    // 3. Arrow Function
+    const divide = (a, b) => a / b;
+
+    // Demo values
+    const a = 10;
+    const b = 5;
+
+    // Build result text
+    const resultText = `
+      <strong>Function Declaration (<code>add</code>)</strong>: ${a} + ${b} = ${add(a, b)}<br>
+      <strong>Function Expression (<code>multiply</code>)</strong>: ${a} × ${b} = ${multiply(a, b)}<br>
+      <strong>Arrow Function (<code>divide</code>)</strong>: ${a} ÷ ${b} = ${divide(a, b)}
+    `;
+
+    // Display results
+    document.getElementById("output").innerHTML = resultText;
+  </script>
+</body>
+</html>
+

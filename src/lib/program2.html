@@ -1,0 +1,111 @@
+b.  Write a JavaScript program to select the elements in HTML page using selectors
+
+<!DOCTYPE html>
+<html>
+<head>
+       <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Element Selectors Demo</title>
+  <style>	
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f7;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      background-color: #dfe6e9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    p.info {
+      background-color: #fff;
+      padding: 8px 12px;
+      margin: 10px 0;
+      border-left: 5px solid #3498db;
+      border-radius: 5px;
+    }
+
+    ul {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      list-style-type: square;
+      border: 1px solid #ccc;
+    }
+
+    ul li {
+      margin: 5px 0;
+      padding: 5px;
+      transition: background 0.3s;
+    }
+
+    ul li:hover {
+      background-color: #f1c40f;
+      color: white;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      border: 2px solid #2980b9;
+      background-color: #ecf0f1;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-size: 16px;
+    }
+
+    strong {
+      color: #2980b9;
+    }
+  </style></head>
+<body>
+
+  <h1 id="mainHeading">Welcome to Selector Demo</h1>
+  <p class="info">This is a paragraph with class "info".</p>
+  <p class="info">This is another paragraph with class "info".</p>
+
+  <ul>
+    <li>Item One</li>
+    <li>Item Two</li>
+  </ul>
+
+  <div id="output" class="result"></div>
+
+  <script>
+    // Select by ID
+    let heading = document.getElementById("mainHeading");
+
+    // Select by class name
+    let infoParagraphs = document.getElementsByClassName("info");
+
+    // Select by tag name
+    let listItems = document.getElementsByTagName("li");
+
+    // Using querySelector
+    let firstInfo = document.querySelector(".info");
+
+    // Using querySelectorAll
+    let allInfo = document.querySelectorAll(".info");
+
+    // Display results inside the 'output' div
+    let output = document.getElementById("output");
+    output.innerHTML = `
+      <strong>Selected Elements:</strong><br><br>
+      Heading text (by ID): ${heading.textContent} <br>
+      First paragraph (by class): ${infoParagraphs[0].textContent} <br>
+      Number of paragraphs with class 'info': ${infoParagraphs.length} <br>
+      First list item (by tag): ${listItems[0].textContent} <br>
+      Using querySelector (first .info): ${firstInfo.textContent} <br>
+      Total elements with .info using querySelectorAll: ${allInfo.length}
+    `;
+  </script>
+
+</body>
+</html>

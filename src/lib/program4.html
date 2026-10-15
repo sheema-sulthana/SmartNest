@@ -1,0 +1,57 @@
+d. Write a JavaScript program to handle the click events for the HTML button elements
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Event Handling</title>
+  <style>
+    button {
+      margin: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Click the Buttons to See the Result</h2>
+
+  <!-- Buttons -->
+  <button id="btn1">Button 1</button>
+  <button id="btn2">Button 2</button>
+  <button id="btn3">Button 3</button>
+
+  <!-- Output area -->
+  <p id="result">No button clicked yet.</p>
+
+  <script>
+    // Get references to buttons and output element
+    const result = document.getElementById("result");
+    const btn1 = document.getElementById("btn1");
+    const btn2 = document.getElementById("btn2");
+    const btn3 = document.getElementById("btn3");
+
+    // Add click event listeners
+    btn1.addEventListener("click", function() {
+      result.innerHTML = "You clicked Button 1";
+    });
+
+    btn2.addEventListener("click", function() {
+      result.innerHTML = "You clicked Button 2";
+    });
+
+    btn3.addEventListener("click", function() {
+      result.innerHTML = "You clicked Button 3";
+    });
+  </script>
+
+</body>
+</html>

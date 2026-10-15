@@ -1,0 +1,7 @@
+Ul {
+  list-style-type: none;
+  display: flex;
+  back-ground-color: blue;
+  padding:20px;
+  color: #fff;
+}

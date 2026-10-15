@@ -1,0 +1,54 @@
+Write a JavaScript program to link JavaScript file with the HTML page 
+    
+       Create an HTML file
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS & CSS Linking (No DOM Selectors)</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to My Page</h1>
+    
+    <!-- Inline event call to JS function -->
+    <button onclick="showMessage()">Click Me</button>
+
+    <!-- Link JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
+   
+   style.css
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: navy;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkcyan;
+}
+
+script.js
+// Function called directly from HTML
+function showMessage() {
+    alert("Hello! You clicked the button.");
+}
